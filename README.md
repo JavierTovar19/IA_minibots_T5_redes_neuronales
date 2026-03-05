@@ -17,7 +17,7 @@ Luego se normalizan las imágenes dividiendo entre 255 para que los valores qued
 
 Luego se compila el modelo definiendo el optimizador Adam, la función de pérdida sparse_categorical_crossentropy y la métrica de precisión (accuracy). Posteriormente se entrena la red durante varias épocas con fit(), donde el modelo va ajustando sus pesos para minimizar el error, y finalmente se evalúa su desempeño con evaluate() usando los datos de prueba. En general, el modelo logra una precisión cercana al 90%, lo que demuestra que las redes neuronales son capaces de aprender automáticamente características relevantes de las imágenes y realizar clasificaciones de manera eficiente.
 
-Todo se puede evidenciar mejor en el codigo [P2_libreria.ipynb](Codigo/P1_red_neuronal.ipynb)
+Todo se puede evidenciar mejor en el codigo [P2_libreria.ipynb](Codigo/P2_libreria.ipynb)
 
 ### 3. Consiga un data set de cualquier tipo, puede ser de https://www.kaggle.com/datasets, estudie sus características (features) y su rótulo. Diseñe una red neuronal y haga ejemplos con base en los pesos aprendidos. 
 
