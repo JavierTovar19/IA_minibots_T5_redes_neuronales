@@ -10,6 +10,15 @@ Este proceso se repite durante 10000 épocas hasta que la red logra aprender cor
 
 
 ### 2. Con base en la librería tensorflow, descargue el data set fashion MNIST. Haga una clasificación de prendas de vestir. Explique cada una de las funciones y las principales instrucciones, saque conclusiones.
+
+En este punto se utiliza la librería TensorFlow para trabajar con el dataset Fashion MNIST, que contiene imágenes de ropa en escala de grises de 28x28 píxeles organizadas en 10 categorías diferentes. Primero se descarga el conjunto de datos usando la función load_data(), que separa automáticamente los datos en entrenamiento y prueba. 
+
+Luego se normalizan las imágenes dividiendo entre 255 para que los valores queden entre 0 y 1, lo cual ayuda a que el entrenamiento sea más estable y eficiente. Después se construye el modelo con Sequential, comenzando con una capa Flatten que convierte cada imagen de 28x28 en un vector de 784 valores, tal como se explica en el PDF cuando se habla de MNIST. A continuación, se agregan dos capas densas (Dense) con función de activación ReLU, que permiten que la red aprenda patrones más complejos dentro de las imágenes, y finalmente una capa de salida con 10 neuronas y activación Softmax, que genera la probabilidad de que la imagen pertenezca a cada clase.
+
+Luego se compila el modelo definiendo el optimizador Adam, la función de pérdida sparse_categorical_crossentropy y la métrica de precisión (accuracy). Posteriormente se entrena la red durante varias épocas con fit(), donde el modelo va ajustando sus pesos para minimizar el error, y finalmente se evalúa su desempeño con evaluate() usando los datos de prueba. En general, el modelo logra una precisión cercana al 90%, lo que demuestra que las redes neuronales son capaces de aprender automáticamente características relevantes de las imágenes y realizar clasificaciones de manera eficiente.
+
+Todo se puede evidenciar mejor en el codigo [P2_libreria.ipynb](Codigo/P1_red_neuronal.ipynb)
+
 ### 3. Consiga un data set de cualquier tipo, puede ser de https://www.kaggle.com/datasets, estudie sus características (features) y su rótulo. Diseñe una red neuronal y haga ejemplos con base en los pesos aprendidos. 
 
 Para trabajar en este p
